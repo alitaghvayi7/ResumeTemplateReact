@@ -1,0 +1,97 @@
+@import "../../global.scss";
+.testiMonials{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    @include mobileRes(){
+       padding: 15px;
+    }
+    @include tabletRes(){
+        padding: 15px;
+     }
+    h2{
+        font-size: 50px;
+        @include mobileRes(){
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+        @include tabletRes(){
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+    }
+    .containerCard{
+        width: 70%;
+        height: 70%;
+        display: flex;
+        justify-content: space-around;
+        @include mobileRes(){
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        @include tabletRes(){
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        @include monitorRes(){
+            justify-content: space-between;
+            gap: 25px;
+        }
+        .cardPersonal{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 280px;
+            height: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.16); 
+            box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.16);  
+            text-align: center;
+            transition: .5s;
+            @include mobileRes(){
+                gap: 15px;
+            } @include tabletRes(){
+                gap: 15px;
+            }
+            .topCard{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                img{
+                    &:nth-child(1){
+                        display: block;
+                        width: 35px;
+                        height: 35px;
+                        object-fit: cover;
+                    }
+                    &:nth-child(2){
+                        display: block;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    &:nth-child(3){
+                        display: block;
+                        width: 35px;
+                        height: 35px;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .centerCard{
+                background-color: rgb(243, 243, 243);
+                border-radius: 20px;
+                line-height: 28px;
+                font-weight: 500;
+                padding: 5px;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

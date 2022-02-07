@@ -1,0 +1,95 @@
+@import "../../global.scss";
+.intro{
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    @include mobileRes(){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    @include tabletRes(){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .leftIntro{
+        flex: 1;
+        .imageContainer{
+            width: 700px;
+            height: 700px;
+            background-color: crimson;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            @include mobileRes(){
+                width: 100%;
+                height: 100%;
+                align-items: flex-start;
+                flex-basis: 100%;
+            }
+            @include tabletRes(){
+                width: 100%;
+                height: 100%;
+                align-items: flex-start;
+                flex-basis: 100%;
+            }
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .rightIntro{
+        flex: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include mobileRes(){
+            display: none;
+        }
+        @include tabletRes(){
+            display: none;
+        }
+        .rightIntroWrapper{
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 25px;
+            h1{
+                font-size: 60px;
+            }
+            h2{
+                font-size: 38px;
+            }
+            h3{
+                font-size: 28px;
+                span{
+                    color: crimson;
+                }
+            }
+        }
+        a{
+            img{
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                bottom: 10px;
+                left: 45%;
+                opacity: 0;
+                transform: translateY(-10px);
+                animation: arrowAnimation 2s ease infinite;
+            }
+        }
+        @keyframes arrowAnimation {
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}

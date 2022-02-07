@@ -1,0 +1,101 @@
+@import "../../global.scss";
+.works{
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include mobileRes(){
+        padding: 15px
+    }
+    @include tabletRes(){
+        padding: 15px
+    }
+    .worksSlider{
+        width: 750px;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        @include mobileRes(){
+            width: 280px;
+            height: 200px;
+        }
+        @include tabletRes(){
+            width: 380px;
+            height: 200px;
+        }
+        .sliderContainer{
+            position: relative;
+            transition: .5s;
+            width: 400%;
+            height: 100%;
+            display: flex;
+            .sliderItem{
+                width: 25%;
+                height: 100%;
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    .prevSliderBtn{
+        background-color: inherit;
+        width: 30px;
+        height: 50px;
+        transform: rotateY(180deg);
+        position: absolute;
+        left: 65px;
+        cursor: pointer;
+        @include mobileRes(){
+            width: 20px;
+            height: 40px;
+            left: 4px;
+        }
+        @include tabletRes(){
+            width: 20px;
+            height: 40px;
+            left: 4px;
+        }
+        @include monitorRes(){
+            left: 4px;
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .nextSliderBtn{
+        background-color: inherit;
+        width: 30px;
+        height: 50px;
+        position: absolute;
+        right: 95px;
+        cursor: pointer;
+        @include mobileRes(){
+            width: 20px;
+            height: 40px;
+            right: 4px;
+        }
+        @include tabletRes(){
+            width: 20px;
+            height: 40px;
+            right: 4px;
+        }
+        @include monitorRes(){
+            right: 4px;
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
